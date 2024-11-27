@@ -21,5 +21,16 @@ export const homepage = defineType({
             name: "mainImage",
             title: "Hovedbildet",
         }),
+        {
+            name: "projects",
+            title: "Prosjekter",
+            type: "array",
+            of: [
+                {
+                    type: "reference",
+                    to: [{ type: "post"}]
+                }
+            ]
+        }
     ]
 })

@@ -1,8 +1,6 @@
 import { defineType } from "sanity";
 import { image } from "../objects/image.schema";
-import { blockArea } from "../objects/blocks.schema";
-import { secondarySlugs, slug } from "../objects/slug.schema";
-import { teaserGroup } from "../objects/teaser.schema";
+import { slug } from "../objects/slug.schema";
 
 export const postCategories = [
 	{
@@ -32,10 +30,6 @@ export const post = defineType({
             name: "general",
             title: "General",
             default: true,
-        },
-        {
-            name: "teaser",
-            title: "Teaser",
         },
         {
             name: "byline",
@@ -91,11 +85,6 @@ export const post = defineType({
 			title: 'Content',
 			group: 'general',
 		},
-        blockArea({
-            group: "general"
-        }),
-        ...teaserGroup,
-        secondarySlugs({ group: "seo"})
     ],
     orderings: [
 		{
