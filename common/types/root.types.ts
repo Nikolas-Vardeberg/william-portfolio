@@ -9,6 +9,7 @@ export type SanityBlockContent = any[];
 
 export type SanityRichtTextType = any[];
 
+
 export type Project = {
     _type: "project";
     title: string;
@@ -38,3 +39,11 @@ export type WilliamImage = {
 	lqip: string;
 	_type: 'image';
 } & Image;
+
+export type Post = {
+	_type: "post";
+	_id: string;
+	title: string;
+	mainImage: WilliamImage;
+	content: SanityBlockContent;
+}

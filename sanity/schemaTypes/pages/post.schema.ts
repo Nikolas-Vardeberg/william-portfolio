@@ -27,21 +27,6 @@ export const post = defineType({
         slug(undefined, {
             group: "general",
         }),
-        {
-            name: "entry",
-            type: "simpleRichText",
-            title: "Ingress",
-            group: "general",
-        },
-        {
-			name: 'publishedAt',
-			type: 'datetime',
-			title: 'Publisert',
-			group: 'general',
-			description: 'Dato for publisering av prosjekt',
-			initialValue: new Date().toISOString(),
-			validation: (Rule) => Rule.required(),
-		},
         image({
 			name: 'mainImage',
 			group: 'general',

@@ -1,4 +1,5 @@
 import { POST_BY_SLUG_QUERY } from "@/common/queries/pages/post.queries"
+import PostView from "@/common/views/post-view";
 import { sanityFetch } from "@/sanity/lib/live"
 import { notFound } from "next/navigation";
 
@@ -25,10 +26,6 @@ export default async function PostPage(props: PageProps) {
     if (!data || !data.data) return notFound();
 
     return(
-        <div>
-            <pre>
-                {JSON.stringify(data.data, undefined, 2)}
-            </pre>
-        </div>
+        <PostView data={data.data} />
     )
 }
