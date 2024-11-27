@@ -9,10 +9,17 @@ export type SanityBlockContent = any[];
 
 export type SanityRichtTextType = any[];
 
+export type Project = {
+    title: string;
+    image: WilliamImage;
+    slug: string;
+}
+
 export type Home = {
     title: string;
     entry: SanityRichtTextType;
     mainImage: WilliamImage;
+    project: Project[];
 }
 
 export type Nullable<T> = T | null;

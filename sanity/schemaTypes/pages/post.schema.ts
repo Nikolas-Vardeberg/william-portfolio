@@ -2,25 +2,6 @@ import { defineType } from "sanity";
 import { image } from "../objects/image.schema";
 import { slug } from "../objects/slug.schema";
 
-export const postCategories = [
-	{
-		title: 'Ingen',
-		value: 'none',
-	},
-	{
-		title: 'Software Development',
-		value: 'Software',
-	},
-	{
-		title: 'Large Language Models',
-		value: 'llm',
-	},
-	{
-		title: 'Web Development',
-		value: 'webdev',
-	},
-];
-
 export const post = defineType({
     name: "post",
     type: "document",
@@ -61,18 +42,6 @@ export const post = defineType({
 			initialValue: new Date().toISOString(),
 			validation: (Rule) => Rule.required(),
 		},
-        {
-            name: "category",
-            type: "string",
-            title: "Kategori",
-            group: "general",
-            options: {
-                list: postCategories,
-                layout: 'radio',
-            },
-            initialValue: "none",
-            validation: (rule) => rule.required(),
-        },
         image({
 			name: 'mainImage',
 			group: 'general',
