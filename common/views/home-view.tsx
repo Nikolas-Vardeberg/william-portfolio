@@ -6,14 +6,13 @@ import SanityImage from "../components/atoms/SanityImage";
 
 export default async function HomeView({data}: { data: Home }) {
     return(
-        <div>
-            <div className="prose prose-xl">
+        <div className="container flex mx-auto flex-col">
+            <div className="prose-xl prose">
                 <PortableText value={data.entry} />
             </div>
 
                 <div className="grid gap-5 grid-cols-1 xl:grid-cols-2">
                     {data.project?.map((project, k) => {
-
                         return(
                             <Link
                                 key={k}
@@ -28,7 +27,7 @@ export default async function HomeView({data}: { data: Home }) {
                                             className="w-full aspect-[16/9]"
                                         />
                                     </div>
-                                    <div className="flex flex-wrap justify-between mt-2 w-full text-lg md:text-3xl">
+                                    <div className="flex text-white flex-wrap justify-between mt-2 w-full text-lg md:text-3xl">
                                         {project.title}
                                     </div>
                                 </div>
@@ -37,9 +36,6 @@ export default async function HomeView({data}: { data: Home }) {
                     })}
                 </div>
             
-            <pre>
-                {JSON.stringify(data.project, undefined, 2)}
-            </pre>
         </div>
     )
 }
