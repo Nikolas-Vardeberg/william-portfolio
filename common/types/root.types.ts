@@ -5,6 +5,8 @@ import { Image } from "sanity";
 
 export type Page = any[];
 
+export type SanityBlockContent = any[];
+
 export type SanityRichtTextType = any[];
 
 export type Home = {
