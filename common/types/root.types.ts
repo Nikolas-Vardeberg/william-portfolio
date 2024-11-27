@@ -10,8 +10,9 @@ export type SanityBlockContent = any[];
 export type SanityRichtTextType = any[];
 
 export type Project = {
+    _type: "project";
     title: string;
-    image: WilliamImage;
+    mainImage: WilliamImage;
     slug: string;
 }
 
