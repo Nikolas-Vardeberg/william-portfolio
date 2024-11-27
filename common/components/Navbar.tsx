@@ -1,7 +1,5 @@
 import Link from "next/link";
 
-
-
 export default function Navbar() {
     return(
         <div className="flex flex-wrap justify-between items-center gap-x-5 px-4 py-4 lg:px-5 border-b">
