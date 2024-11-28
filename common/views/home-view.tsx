@@ -6,7 +6,7 @@ import SanityImage from "../components/atoms/SanityImage";
 
 export default async function HomeView({data}: { data: Home }) {
     return(
-        <div className="container flex mx-auto flex-col gap-y-12 my-10 bg-white">
+        <div className="container flex mx-auto flex-col gap-y-12 my-10 bg-white overflow-hidden rounded-3xl">
 
                 <div className="w-full">
                     <SanityImage 
@@ -34,7 +34,7 @@ export default async function HomeView({data}: { data: Home }) {
                                             image={project.mainImage}
                                             height={500}
                                             width={500}
-                                            className="w-full aspect-[16/9] border-2 border-black"
+                                            className="w-full aspect-[4/3] border-2 border-black"
                                         />
                                     </div>
                                     <div className="flex text-black flex-wrap justify-between mt-2 w-full text-lg md:text-3xl">

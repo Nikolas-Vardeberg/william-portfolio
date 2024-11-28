@@ -1,8 +1,3 @@
-
-
-
-
-
 import Navbar from '@/common/components/Navbar';
 import React from 'react'
 
